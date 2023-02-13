@@ -1,5 +1,5 @@
-# MyApp
-<!-- Two pages / routing
+# MyApp Notes
+Two pages / routing
 Styled presentation using SCSS
 Components (as needed) bound to a data model (where appropriate)
 One in-memory service
@@ -26,7 +26,7 @@ description box has 3 boxes with wraped text, either parent box has a height or 
 ...seems both in the css but we wont do that. contents drive the car.
 
 we need a resolver/resolve data to routes
--->
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
 
 ## Development server
