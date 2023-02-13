@@ -35,15 +35,26 @@ describe('DataResolver', () => {
     expect(resolver).toBeTruthy();
   });
 
-  it('should divide the data into two arrays of equal length', () => {
+  it('should divide the data into two arrays if array size is odd', () => {
     const data = [1, 2, 3, 4, 5];
     packageOptions.createDb = jasmine.createSpy().and.returnValue({ packageOptions: data });
-
-    const route = new ActivatedRouteSnapshot();
-    const state = new RouterStateSnapshot(new TestTreeNode(route, []));
-    const result = resolver.resolve(route, state);
+    console.log(packageOptions)
+  
+    const result = resolver.resolve();
 
     expect(result.array1.length).toEqual(2);
+    expect(result.array2.length).toEqual(3);
+
+  });
+
+  it('should divide the data into two arrays of equal length', () => {
+    const data = [1, 2, 3, 4, 5, 6];
+    packageOptions.createDb = jasmine.createSpy().and.returnValue({ packageOptions: data });
+    console.log(packageOptions)
+  
+    const result = resolver.resolve();
+
+    expect(result.array1.length).toEqual(3);
     expect(result.array2.length).toEqual(3);
 
   });
