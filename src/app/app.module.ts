@@ -7,7 +7,8 @@ import { OneComponent } from './pages/one/one.component';
 import { TwoComponent } from './pages/two/two.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
-import { PackageOptionsComponent } from './class/package-options/package-options.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { PackageOptions } from './class/package-options';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,11 @@ import { PackageOptionsComponent } from './class/package-options/package-options
     TwoComponent,
     HeaderComponent,
     CardComponent,
-    PackageOptionsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientInMemoryWebApiModule.forRoot(PackageOptions),
   ],
   providers: [],
   bootstrap: [AppComponent]
