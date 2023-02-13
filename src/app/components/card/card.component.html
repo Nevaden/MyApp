@@ -1,7 +1,8 @@
 
 <section #cardContainer class="card_Container" [ngClass]="getClasses(item)">
     <h2 class="card_Title">{{item.title | uppercase}}</h2>
-    <p class="card_Price">{{item.price | currency:'USD':'symbol':'1.0-0'}}</p>
+    <p class="card_Price" *ngIf="!cardContainer.classList.contains('selected')" >{{item.price | currency:'USD':'symbol':'1.0-0'}}</p>
+    <p class="card_Price" *ngIf="cardContainer.classList.contains('selected')" >BOUGHT!</p>
     <p class="card_Description">{{item.description}}</p>
     <button class="card_Button" *ngIf="!item.isSelected" (click)="updateSelection(item)" [disabled]="cardContainer.classList.contains('not-selected')">Buy</button>
     <button class="card_Button" *ngIf="item.isSelected" (click)="updateSelection(null)">Cancel</button>
