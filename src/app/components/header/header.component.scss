@@ -1,0 +1,39 @@
+.header_container{
+    background: transparent linear-gradient(133deg, #6600FF 0%, #5300CF 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.header_contents{
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    padding-left: 17px;
+    font: normal normal normal 24px/29px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+nav{ 
+    margin-right: 34px;
+    display: flex;
+    height: 100%;
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+
+        text-decoration: none;
+        font: normal normal normal 18px/22px;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+    }
+    .activeLink{
+        background: #7127DF 0% 0% no-repeat padding-box;
+    }
+}
