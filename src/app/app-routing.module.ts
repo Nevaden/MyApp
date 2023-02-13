@@ -12,7 +12,7 @@ const routes: Routes = [
       data: DataResolver
     },
     data: {
-      part: 0
+      array1: []
     }
 
   },
@@ -23,7 +23,7 @@ const routes: Routes = [
       data: DataResolver
     },
     data: {
-      part: 1
+      array2: []
     }
 
   },
