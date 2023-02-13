@@ -13,7 +13,7 @@ import { PackageOptions } from '../class/package-options';
 
 export class DataResolver implements Resolve<{array1: any[], array2: any[]}> {
   constructor(private dataService: PackageOptions){}
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+  resolve() {
 
     const data = this.dataService.createDb().packageOptions;
     const half = data.length / 2;
