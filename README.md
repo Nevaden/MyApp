@@ -1,5 +1,32 @@
 # MyApp
+<!-- Two pages / routing
+Styled presentation using SCSS
+Components (as needed) bound to a data model (where appropriate)
+One in-memory service
+Some unit test coverage 
 
+two pages components
+one card component
+one header component(some kinda gradient) flex space-between  div>h1>nav<navitems>
+inMemoryDbService / class holding data
+Routing/[ActiveRoute]
+[disabled]1
+*ngIf for the buy/cancel button?
+filter/opacity when not purchased/selected
+array class/additonal variable for something being selected.  
+[ngClass] based on...(not-selected && somethingSelected?) or selected/bought
+
+flex
+flex-direction col
+@media(min-width 801px)
+flex-direction: row
+
+padding/margins from demo
+description box has 3 boxes with wraped text, either parent box has a height or more likely the description text box has a height
+...seems both in the css but we wont do that. contents drive the car.
+
+we need a resolver/resolve data to routes
+-->
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
 
 ## Development server
