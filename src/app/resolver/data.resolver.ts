@@ -16,7 +16,6 @@ export class DataResolver implements Resolve<{array1: any[], array2: any[]}> {
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
 
     const data = this.dataService.createDb().packageOptions;
-    // const array = route.data['array'];
     const half = data.length / 2;
     return {
       array1: data.slice(0, half),

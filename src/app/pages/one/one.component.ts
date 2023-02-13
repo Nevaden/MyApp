@@ -16,5 +16,4 @@ export class OneComponent implements OnInit {
       this.data = data['data'].array1
     });
   }
-
 }
