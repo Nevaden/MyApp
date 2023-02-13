@@ -10,22 +10,18 @@ import { PackageOptions } from '../class/package-options';
 @Injectable({
   providedIn: 'root'
 })
-export class DataResolver implements Resolve<any> {
+
+export class DataResolver implements Resolve<{array1: any[], array2: any[]}> {
   constructor(private dataService: PackageOptions){}
-  resolve(): Observable<any> {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+
     const data = this.dataService.createDb().packageOptions;
-
-
-    // Divide the data into two parts
-    let firstHalf = data.slice(0, data.length / 2);
-    let secondHalf = data.slice(data.length / 2);
-
-    // Return the two parts as an observable
-    return new Observable((observer) => {
-      observer.next([firstHalf, secondHalf]);
-      observer.complete();
-    });
-
+    // const array = route.data['array'];
+    const half = data.length / 2;
+    return {
+      array1: data.slice(0, half),
+      array2: data.slice(half)
+    };
   }
 }
 
