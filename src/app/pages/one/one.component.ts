@@ -13,7 +13,7 @@ export class OneComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe((data) => {
-      this.data = data['data'];
+      this.data = data['data'].array1
     });
   }
 
