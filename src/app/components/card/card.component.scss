@@ -1,0 +1,22 @@
+.card_Container {
+    width: 386px;
+    display: flex;
+    flex-direction: column;
+
+    &.starter {
+      background-color: #979797;
+    }
+    &.regular {
+      background: #3B86FF 0% 0% no-repeat padding-box;
+    }
+    &.professional {
+      background-color: #8B68EE;
+    }
+    &.ultimate {
+      background-color: #EE3541;
+    }
+
+    &.not-selected{
+      opacity: .75;
+    }
+  }
