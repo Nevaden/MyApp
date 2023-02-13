@@ -21,10 +21,10 @@ export class PackageOptions implements InMemoryDbService {
     updateSelection(packageOption: { isSelected: boolean; }) {
         this.packageOptions.forEach((p: { isSelected: boolean; }) => p.isSelected = false);
         packageOption.isSelected = true;
-        this.hassSelectedItem();
+        this.hasSelectedItem();
       }
 
-      hassSelectedItem() {
+      hasSelectedItem() {
         return this.packageOptions.some((p: { isSelected: any; }) => p.isSelected);
       }
 }
