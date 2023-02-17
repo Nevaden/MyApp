@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
   })
 
 export class PackageOptions implements InMemoryDbService {
-    
+
     packageOptions = [
         { title: 'starter', price: 1, description: 'Starter features for your business to grow.',isSelected: false},
         { title: 'regular', price: 25, description: 'Regular features for your business to grow.',isSelected: false},
